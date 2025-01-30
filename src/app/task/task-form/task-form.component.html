@@ -1,0 +1,53 @@
+@if(isEditMode){
+    <h2>Edit Task</h2>
+}@else {
+    <h2>Add new Task</h2>
+}
+
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Title:</label>
+        <input 
+            type="text" 
+            name="title" 
+            formControlName="title"
+            [ngClass]="{'invalid-field': isTitleFieldInvalid() }"
+        />
+        @if(isTitleFieldInvalid()) {
+            <p class="error" [validationErrors]="taskForm.controls.title.errors"></p>
+        }
+    </div>
+ 
+
+    <div>
+        <label>Description:</label>
+        <textarea 
+            rows="4" 
+            cols="50" 
+            name="description" 
+            formControlName="description"
+            [ngClass]="{'invalid-field': isDescriptionFieldInvalid() }"
+        ></textarea>
+
+        @if(isDescriptionFieldInvalid()) {
+            <p  class="error" [validationErrors]="taskForm.controls.description.errors"></p>
+        }
+    </div>
+
+    <div>
+        <label>Due Date:</label>
+        <input 
+            type="date" 
+            name="dueDate" 
+            formControlName="dueDate"
+            [ngClass]="{'invalid-field': isDueDateFieldInvalid() }"
+        />
+        @if(isDueDateFieldInvalid()) {
+            <p  class="error" [validationErrors]="taskForm.controls.dueDate.errors"></p>
+        }
+    </div>
+
+   
+    <button [disabled]="taskForm.invalid" type="submit">{{ isEditMode? "Edit": "Create"}}</button>
+    <button type="button" (click)="resetForm()">Cancel</button>
+</form>

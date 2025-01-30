@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Learn Angular",
+      "dueDate": "2024-05-01T00:00:00Z",
+      "description": "Learn Angular – Fundamentals",
+      "isCompleted": true
+    },
+    {
+      "title": "Eat Kikiam",
+      "description": "eat the remaining kikiam in the fridge",
+      "dueDate": "2025-01-27T00:00:00.000Z",
+      "isCompleted": true,
+      "id": 2
+    },
+    {
+      "title": "Play Overcooked2",
+      "description": "Finish one of the extra trimmings in Overcooked 2",
+      "dueDate": "2025-02-01T00:00:00.000Z",
+      "isCompleted": false,
+      "id": 3
+    },
+    {
+      "title": "Eat Fish",
+      "description": "Eat bangus stored in the fridge",
+      "dueDate": "2025-01-29T00:00:00.000Z",
+      "isCompleted": true,
+      "id": 4
+    },
+    {
+      "title": "Happy New Year! Finish PDR",
+      "description": "Finish your self-input in Workday",
+      "dueDate": "2025-01-01T00:00:00.000Z",
+      "isCompleted": false,
+      "id": 5
+    },
+    {
+      "title": "Finish Angular Project",
+      "description": "Finish the to-do list application",
+      "dueDate": "2025-01-28T00:00:00.000Z",
+      "isCompleted": false,
+      "id": 6
+    },
+    {
+      "title": "Demo App Final",
+      "description": "Demo App Final",
+      "dueDate": "2025-02-01T00:00:00.000Z",
+      "isCompleted": false,
+      "id": 7,
+      "status": "Due"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<mat-select 
+    class="container" 
+    [value]="selectedFilter()" 
+    (selectionChange)="onChange($event)"
+>
+    @for (option of taskFilterOptions; track option.value) {
+        <mat-option [value]="option.value">{{option.text}}</mat-option>
+    }
+</mat-select>

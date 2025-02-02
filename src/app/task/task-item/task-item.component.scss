@@ -1,0 +1,33 @@
+.container{
+    max-width: 600px;
+    margin-bottom: 8px;
+    :last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+.label-status{
+    min-width: 40px;
+    height: 18px;
+    margin-left: 8px;
+    display: inline-flex;
+    padding: 4px 8px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    border:1px solid skyblue;
+    background-color: skyblue;
+}
+
+.completed {
+    border:1px solid rgb(105, 220, 178);
+    background-color: rgb(105, 220, 178);
+}
+
+.due {
+    border:1px solid pink;
+    background-color: pink;
+}

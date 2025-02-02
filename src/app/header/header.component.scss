@@ -1,0 +1,17 @@
+.navbar{
+    padding: 20px 20px;
+    background-color: darkslateblue;
+    display: flex;
+    align-items: center;
+
+    .brand{
+        color: white;
+        font-size: 24px;
+        width: 160px;
+    }
+
+    .link{
+        color: white;
+        margin: 8px;
+    }
+}

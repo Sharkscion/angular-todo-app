@@ -1,0 +1,26 @@
+    <mat-card class="container" appearance="outlined">
+        <mat-card-header>
+            <mat-card-title>{{task().title}}</mat-card-title>
+            <mat-card-subtitle>
+                <span>{{task().dueDate | date: 'longDate'}}</span>
+
+                <span 
+                    class="label-status"
+                    [ngClass]="getStatusLabelClassStyle(task().status!)"
+                >
+                    {{task().status}}
+                </span>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{task().description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            @if(!task().isCompleted){
+                <button mat-flat-button type="button" (click)="onTaskComplete(task().id)">Complete</button>
+            }
+            <button mat-button type="button" (click)="onTaskEdit(task().id)">Edit</button>
+            <button mat-button type="button" (click)="onTaskDelete(task().id)">Delete</button>
+          </mat-card-actions>
+    </mat-card>
+

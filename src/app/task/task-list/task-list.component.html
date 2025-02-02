@@ -1,0 +1,25 @@
+<h1>My List of Tasks</h1>
+
+
+
+    <task-filter
+    [selectedFilter]="selectedFilter()"
+    (onFilterChanged)="onFilterChanged($event)"/>
+    
+
+
+
+@if(tasks().length == 0){
+    <p>No tasks to be displayed.</p>
+}@else {
+        @for (task of tasks() | sort: 'dueDate': 'asc' ; track task.id) {
+            <task-item
+                [task]="task"
+                (complete)="onTaskComplete($event)"
+                (delete)="onTaskDelete($event)"
+                (edit)="onTaskEdit($event)"/>
+        }
+        
+}
+
+
